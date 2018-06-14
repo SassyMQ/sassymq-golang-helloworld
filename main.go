@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/eejai42/sassymq-golang/helloworld/demo"
+	"github.com/sassymq/sassymq-golang-helloworld/demo"
 )
 
 func main() {
