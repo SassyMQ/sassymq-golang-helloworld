@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/eejai42/sassymq-golang/errors"
 	"github.com/google/uuid"
+	"github.com/sassymq/sassymq-golang-helloworld/demo/errors"
 	"github.com/streadway/amqp"
 )
 
