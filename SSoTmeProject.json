@@ -1,0 +1,135 @@
+{
+  "HiddenPaths": [],
+  "ExpandedPaths": [],
+  "ShowHidden": false,
+  "ShowAllFiles": false,
+  "CurrentPath": null,
+  "SaveDisabled": false,
+  "SSoTmeProjectId": "977722ed-de7f-449d-9334-ed84b88d3834",
+  "Name": "sassymq-golang-helloworld",
+  "RootPath": "C:\\Users\\EJ\\go\\src\\github.com\\sassymq\\sassymq-golang-helloworld",
+  "ProjectSettings": [
+    {
+      "ProjectSettingId": "6533b23e-b861-4dce-8ecd-6956d8579f05",
+      "Name": "project-name",
+      "Value": "sassymq-golang-helloworld"
+    }
+  ],
+  "ProjectTranspilers": [
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "101dfc60-cdbf-4eed-8e92-f2661b9c4312",
+        "Name": "GSheetToSmql",
+        "DisplayName": "G Sheet To Smql",
+        "Description": "Converts a google url into an SMQL file which can be used to generate implem entations of the Lexicon in virtually any MQ tech such as RabbitMQ, Amazon SQS, Assure Messaging, ZeroMQ, etc.",
+        "CreatedOn": "2017-09-15T22:12:40.123",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-FX_hbk0AiBgZNL7i0--5qQ",
+        "LowerName": "gsheettosmql",
+        "UpperName": "GSHEETTOSMQL",
+        "LowerHyphenName": "g-sheet-to-smql",
+        "ReadMeMD": "",
+        "InputDescriptionMD": "parameters:\r\nproject-name = \"your name\"\r\nproject-acronym = \"YN\"\r\nA second URL will be assumed to be a list of actors.",
+        "ExampleMD": "ssotme sassymq/GSheetToSmql https://docs.google.com/spreadsheets/d/1v3pAQu6h3FYAaNqAmcL6j38ohckACRUSOVC33okFwI0/edit#gid=1901564214",
+        "InputFileTypeId": "3c31d7c2-5c85-434b-a5a0-a5bd1dbc0a96",
+        "OutputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
+        "Category": "sassymq",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "fcd2838e-5daf-4857-99c4-caeeedf3687a",
+            "TranspilerId": "101dfc60-cdbf-4eed-8e92-f2661b9c4312",
+            "Name": "v1",
+            "CreatedOn": "2017-09-15T22:12:42.747",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": null,
+      "ProjectTranspilerId": "b39b0914-8968-4afc-95d6-129f64b15e5f",
+      "Name": "GSheetToSmql",
+      "RelativePath": "",
+      "CommandLine": "sassymq/gsheet-to-smql https://docs.google.com/spreadsheets/d/1qHcmWH3xN98wGA5o3G1oyLqY3R70dd4TCOYKf3YYMeo/edit#gid=0 -o SSoT.smql -p project-acronym=DEMO"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "69a746d2-c0b1-4467-a020-9dd12b8bc098",
+        "Name": "SmqlToDocs",
+        "DisplayName": "Smql To Docs",
+        "Description": "Converts an Smql file into documentation.",
+        "CreatedOn": "2017-09-16T22:24:50.93",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-SO2KYSw3nYNV1LPUOAPf8w",
+        "LowerName": "smqltodocs",
+        "UpperName": "SMQLTODOCS",
+        "LowerHyphenName": "smql-to-docs",
+        "ExampleMD": "ssotme sassymq/SmqlToDocs -i .\\HelloWorld.smql",
+        "InputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
+        "OutputFileTypeId": "d8fc84b7-442d-4c7a-92a0-eefc11391934",
+        "Category": "sassymq",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "ea02027b-b8a4-4d73-ab46-c7d722c0cc38",
+            "TranspilerId": "69a746d2-c0b1-4467-a020-9dd12b8bc098",
+            "Name": "v1",
+            "CreatedOn": "2017-09-16T22:25:01.583",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": null,
+      "ProjectTranspilerId": "e6ac60dc-3b1e-408a-b957-f5fae03a7a6e",
+      "Name": "SmqlToDocs",
+      "RelativePath": "/docs",
+      "CommandLine": "sassymq/smql-to-docs -i ..\\SSoT.smql"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "9b86e4ae-d540-4766-8ad6-fb3893290a4f",
+        "Name": "SmqlToRabbitMQConfig",
+        "DisplayName": "Smql To Rabbit M Q Config",
+        "Description": "Creates a script which will configure rabbit with the correct Exchanges, Queues, Routes, etc, given an Smql file.",
+        "CreatedOn": "2017-09-18T14:24:34.077",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-WxioEA3FsR1naAP64GFeiQ",
+        "LowerName": "smqltorabbitmqconfig",
+        "UpperName": "SMQLTORABBITMQCONFIG",
+        "LowerHyphenName": "smql-to-rabbit-m-q-config",
+        "InputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
+        "OutputFileTypeId": "c131c623-c204-4f34-b98f-d326bba5042a",
+        "Category": "rabbitmq",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "e9603743-148c-43b9-82ba-761a32de6045",
+            "TranspilerId": "9b86e4ae-d540-4766-8ad6-fb3893290a4f",
+            "Name": "v1",
+            "CreatedOn": "2017-09-18T14:25:11.687",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": null,
+      "ProjectTranspilerId": "10386ea7-b2ef-483f-86d0-7c9896768b35",
+      "Name": "SmqlToRabbitMQConfig",
+      "RelativePath": "/config",
+      "CommandLine": "sassymq/smql=to-rabbitmq-config -i ..\\SSoT.smql"
+    }
+  ]
+}

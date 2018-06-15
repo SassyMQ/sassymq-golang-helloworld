@@ -9,7 +9,7 @@ import (
 func main() {
 
 	world := new(demo.World)
-	world.Init("amqps://smqPublic:smqPublic@explore.ssot.me/DEMO")
+	world.Init("amqp://guest:guest@localhost/demo")
 	world.AddProgrammerHelloHandler(func(actor *demo.ActorBase, payload *demo.Payload) *demo.Payload {
 		fmt.Println("Got hello from programmer" + payload.Content)
 		return payload
@@ -17,7 +17,7 @@ func main() {
 
 	programmer := new(demo.Programmer)
 
-	programmer.Init("amqps://smqPublic:smqPublic@explore.ssot.me/DEMO")
+	programmer.Init("amqp://guest:guest@localhost/demo")
 	payload := programmer.CreatePayload()
 	payload.Content = "This is the payload"
 	programmer.Hello(payload, func(actor *demo.ActorBase, reply *demo.Payload) *demo.Payload {
