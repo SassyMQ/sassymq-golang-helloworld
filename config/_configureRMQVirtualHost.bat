@@ -3,7 +3,7 @@ REM - This is the main config script - which takes as parameters the username/pa
 
 
 curl -s -i -k -u %1:%2 -H "content-type:application/json" -XPUT %4/api/vhosts/%3
-curl    -i -k -u %1:%2 -H "content-type:application/json" -d "{""configure"":"".*"",""write"":"".*"",""read"":"".*""}" -XPUT %4/api/permissions/%3/ej
+curl    -i -k -u %1:%2 -H "content-type:application/json" -d "{""configure"":"".*"",""write"":"".*"",""read"":"".*""}" -XPUT %4/api/permissions/%3/%1
 
 
 curl -i -k -u %1:%2 -H "content-type:application/json" -d"{""durable"":true}" -XPUT %4/api/queues/%3/programmer.all

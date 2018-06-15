@@ -134,7 +134,7 @@ func (p *ActorBase) listenForever() {
 
 	go func() {
 		for d := range msgs {
-			//log.Printf("%s  received a message: %s", p.queue, d.RoutingKey)
+			fmt.Printf("%s  received a message: %s", p.queue, d.RoutingKey)
 			if value, ok := p.handlers[string(d.RoutingKey)]; ok {
 				var payload *Payload
 				json.Unmarshal(d.Body, &payload)
@@ -177,7 +177,7 @@ func (p *ActorBase) awaitRepliesForever() {
 			var payload *Payload
 			err := json.Unmarshal(d.Body, &payload)
 			errors.DefaultWithPanic(err, "Can't unmarshal payload to json")
-			//log.Printf("%s received a REPLY message: %s", p.queue, payload.ReplyContent)
+			fmt.Printf("%s received a REPLY message: %s", p.queue, payload.ReplyContent)
 			if replyHandler, ok := p.reply_handlers[payload.PayloadId]; ok {
 				delete(p.reply_handlers, payload.PayloadId)
 				replyHandler.(func(*ActorBase, *Payload) *Payload)(p, payload)
