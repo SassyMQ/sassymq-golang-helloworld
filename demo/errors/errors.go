@@ -15,6 +15,6 @@ func DefaultWithPanic(err error, msg string) {
 func Default(err error, msg string) {
 	if err != nil {
 		log.Fatalf("%s: %s", msg, err)
-		fmt.Sprintf("%s: %s", msg, err)
+		fmt.Printf("%s: %s", msg, err)
 	}
 }
